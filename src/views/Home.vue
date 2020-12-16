@@ -1,10 +1,12 @@
 <template>
   <div class="home container l-flex">
     <Cards v-bind:items="items[this.activeItems]" v-on:modal="openModal"/>
-    <Pagination v-bind:pageData="{
-      itemsPerPage: itemsPerPage,
-      maxPages: maxPages
-    }" v-on:pagination="switchPage" />
+    <Pagination 
+      v-bind:pageData="{
+        itemsPerPage: itemsPerPage,
+        maxPages: maxPages
+      }" 
+      v-on:pagination="switchPage" />
     <ModalWindow v-bind:itemUrl="itemUrl" v-on:close="itemUrl = ''"/>
   </div>
 </template>
@@ -34,9 +36,11 @@ export default {
     }
   },
   methods: {
+    // Call to modal component.
     openModal(url) {
       this.itemUrl = url;
     },
+    // On pagination action, get the next active page.
     switchPage(page) {
       if(page) {
         if(this.items.length < page) {
@@ -45,6 +49,7 @@ export default {
         this.updateIndex(page);
       }
     },
+    // Api call (Http request) and push data to item callection.
     getImages(page) {
       ApiService.getImages(page, this.itemsPerPage)
         .then(data => {
@@ -52,6 +57,7 @@ export default {
         })
         .catch(err => console.log(err));
     },
+    // Update number of active index in item array.
     updateIndex(page) {
       this.activeItems = page - 1;
     }

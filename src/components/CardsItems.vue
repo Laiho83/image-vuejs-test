@@ -20,11 +20,13 @@ export default {
     obs: null,
     intersected: false
   }),
+  // Set item usl if item intersected.
   computed: {
     srcImage() {
       return this.intersected ? this.item.card_url : '';
     }
   },
+  // Call to IntersectionObserver for image lazy load.
   mounted() {
     const options = this.options || {};
     this.observer = new IntersectionObserver(([entry]) => {
@@ -35,6 +37,7 @@ export default {
 
     this.observer.observe(this.$el);
   },
+  // Stop watching target elements.
   unmounted() {
     this.observer.disconnect();
   },

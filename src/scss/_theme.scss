@@ -1,10 +1,9 @@
-.app {
+.app-page {
   display: flex;
   flex-flow: column wrap;
   width: 100%;
   min-height: 100vh;
-  max-height: 100vh;
-  background: $white-color;
+  
 }
 
 header {
@@ -13,7 +12,6 @@ header {
   justify-content: center;
   align-items: center;  
   width: 100vw;
-  min-height: $header-height;
   background: $primary-color;  
 }
 
@@ -23,7 +21,6 @@ main {
   justify-content: center;
   align-items: center;  
   width: 100%;
-  max-height: calc(100vh - (2 * #{$header-height}));
   padding: 50px;
   overflow-y: auto;
 }
@@ -35,11 +32,7 @@ footer {
   justify-content: center;
   align-items: center;    
   width: 100vw;
-  min-height: $header-height;
   margin-top: auto;
   color: $white-color;
   background: $primary-color;
-  p {
-    margin: 0;
-  }
 }

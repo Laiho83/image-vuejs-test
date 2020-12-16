@@ -25,14 +25,13 @@ export default {
   },
   props: ['pageData'],
   methods: {
+    // Return next page (if next page < 1 or > max. number of pages return null)
     goToPage(direction) {
       const nextPage = this.activePage + direction;
       if (nextPage > this.pageData.maxPages || nextPage < 1) {
         return null;
       }
-      return this.activePage = nextPage < this.pageData.maxPages 
-                                ? nextPage 
-                                : this.pageData.maxPages;
+      return this.activePage = nextPage < this.pageData.maxPages ? nextPage : this.pageData.maxPages;
     }
   }
 }

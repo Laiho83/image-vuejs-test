@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div class="app-page">
     <Header />    
     <router-view/>
     <Footer />    
@@ -20,11 +20,6 @@ export default {
 </script>
 
 <style lang="scss">
-.page {
-  display: flex;
-  flex-flow: column wrap;
-  width: 100%;
-  min-height: 100vh;
   .home {
     flex: 2;
     padding: 25px 0;
@@ -32,5 +27,4 @@ export default {
   .footer {
     margin-top: auto;
   }
-}
 </style>
