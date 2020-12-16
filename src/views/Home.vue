@@ -28,8 +28,8 @@ export default {
     return {
       items: [],
       itemUrl: '',
-      itemsPerPage: 10,
-      maxPages: 3,
+      itemsPerPage: 100,
+      maxPages: 11,
       activeItems: 0,
     }
   },
@@ -38,7 +38,7 @@ export default {
       this.itemUrl = url;
     },
     switchPage(page) {
-      if(page > 0) {
+      if(page) {
         if(this.items.length < page) {
           this.getImages(page);
         }
@@ -48,7 +48,6 @@ export default {
     getImages(page) {
       ApiService.getImages(page, this.itemsPerPage)
         .then(data => {
-          console.log(data);
           this.items.push(data.map(e => new Item(e)));
         })
         .catch(err => console.log(err));

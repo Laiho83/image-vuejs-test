@@ -2,14 +2,14 @@
 
 // ** Fonts
 @font-face {
-  font-family: 'Montserrat';
+  font-family: 'Roboto';
   src: url('/assets/fonts/Roboto-Regular.ttf') format('truetype');
   font-weight: 400;
   font-display: swap;
   font-style: normal;
 }
 @font-face {
-  font-family: 'MontserratBold';
+  font-family: 'RobotoMedium';
   src: url('/assets/fonts/Roboto-Medium.ttf') format('truetype');
   font-weight: 700;
   font-display: swap;
@@ -37,19 +37,19 @@ body {
 
 // ** TYPOGRAPHY
 h1 {
-  font-size: 24px;
+  font-size: 28px;
   line-height: $h1-line;
   color: $heading-color;
   font-family: $font-family-header, 'fallback';
-  font-weight: 400;
+  font-weight: 700;
 }
 h2 {
-  margin: 0 0 20px;
+  margin: 0 0 24px;
   font-size: $h2-size;
   line-height: $h2-line;
   color: $heading-color;
   font-family: $font-family-header, 'fallback';
-  font-weight: 400;
+  font-weight: 700;
 }
 p {
   margin: 0;

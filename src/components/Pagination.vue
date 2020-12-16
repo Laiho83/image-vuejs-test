@@ -3,7 +3,7 @@
     <div class="prev" @click="$emit('pagination', goToPage(-1))">
       <span></span>
     </div>
-    <div class="page">
+    <div class="page l-flex">
       {{ activePage }}
     </div>
     <div class="next"  @click="$emit('pagination', goToPage(1))">
@@ -28,7 +28,7 @@ export default {
     goToPage(direction) {
       const nextPage = this.activePage + direction;
       if (nextPage > this.pageData.maxPages || nextPage < 1) {
-        return -1;
+        return null;
       }
       return this.activePage = nextPage < this.pageData.maxPages 
                                 ? nextPage 
@@ -71,10 +71,12 @@ export default {
         transform: rotate(135deg);
       }
     }
-    .page {
+    .page {      
+      align-items: center;
       width: 50px;
       height: 35px;
-      box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+      font-weight: bold;
     }
   }
 </style>
