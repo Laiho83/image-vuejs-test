@@ -1,4 +1,8 @@
 # image-vuejs-test
+Simple image project.
+
+## Live version:
+https://laiho83.github.io/image-vuejs-test/
 
 ## Project setup
 ```
