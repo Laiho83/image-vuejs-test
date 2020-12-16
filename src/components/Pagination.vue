@@ -40,8 +40,7 @@ export default {
 <style scoped lang="scss">
   .pagination {
     width: 100%;
-    width: 200px;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: auto;
     .prev,
     .next {
@@ -77,6 +76,7 @@ export default {
       min-height: 35px; 
       box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
       font-weight: bold;
+      margin: 0 25px;
     }
   }
 </style>

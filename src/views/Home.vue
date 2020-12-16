@@ -30,7 +30,7 @@ export default {
     return {
       items: [],
       itemUrl: '',
-      itemsPerPage: 9,
+      itemsPerPage: 99,
       maxPages: 10,
       activeItems: 0,
     }
