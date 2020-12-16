@@ -20,6 +20,21 @@ export default {
 </script>
 
 <style lang="scss">
+// ** Fonts
+@font-face {
+  font-family: 'Roboto';
+  src: url('./fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'RobotoMedium';
+  src: url('./fonts/Roboto/Roboto-Medium.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
   .home {
     flex: 2;
     padding: 25px 0;
