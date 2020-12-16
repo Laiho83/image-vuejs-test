@@ -1,5 +1,5 @@
 <template>
-  <div class="home container">
+  <div class="home container l-flex">
     <Cards v-bind:items="items[this.activeItems]" v-on:modal="openModal"/>
     <Pagination v-bind:pageData="{
       itemsPerPage: itemsPerPage,
@@ -29,7 +29,7 @@ export default {
       items: [],
       itemUrl: '',
       itemsPerPage: 100,
-      maxPages: 11,
+      maxPages: 10,
       activeItems: 0,
     }
   },

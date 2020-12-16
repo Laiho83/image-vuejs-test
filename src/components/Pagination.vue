@@ -3,7 +3,7 @@
     <div class="prev" @click="$emit('pagination', goToPage(-1))">
       <span></span>
     </div>
-    <div class="page l-flex">
+    <div class="active-page l-flex">
       {{ activePage }}
     </div>
     <div class="next"  @click="$emit('pagination', goToPage(1))">
@@ -43,7 +43,7 @@ export default {
     width: 100%;
     width: 200px;
     justify-content: space-between;
-    margin: 25px auto;
+    margin-top: auto;
     .prev,
     .next {
       display: flex;
@@ -71,10 +71,11 @@ export default {
         transform: rotate(135deg);
       }
     }
-    .page {      
+    .active-page {      
       align-items: center;
       width: 50px;
-      height: 35px;
+      height: 35px; 
+      min-height: 35px; 
       box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
       font-weight: bold;
     }

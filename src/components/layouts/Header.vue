@@ -14,7 +14,6 @@ export default {
   .header {
     background: $primary-color;    
     text-align: center;
-    margin-bottom: 25px;
     padding: 15px;
     h1 {
       color: $white-color;
