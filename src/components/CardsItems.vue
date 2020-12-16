@@ -1,7 +1,7 @@
 <template>
     <div class="card" @click="$emit('modal', item.card_url)">
       <div class="card-img">
-        <img :src="item.card_url" :alt="'Image from '+item.author">
+        <img :src="srcImage" :alt="'Image from '+item.author">
       </div>
       <div class="card-content l-flex">
         <div class="l-c"><p class="elipsis">{{ item.author }}</p></div>
@@ -15,7 +15,29 @@
 
 export default {
   name: 'CardItems',
-  props: ['item']
+  props: ['item'],
+  data: () => ({
+    obs: null,
+    intersected: false
+  }),
+  computed: {
+    srcImage() {
+      return this.intersected ? this.item.card_url : '';
+    }
+  },
+  mounted() {
+    const options = this.options || {};
+    this.observer = new IntersectionObserver(([entry]) => {
+      if (entry && entry.isIntersecting) {
+        this.intersected = true;
+      }
+    }, options);
+
+    this.observer.observe(this.$el);
+  },
+  unmounted() {
+    this.observer.disconnect();
+  },
 }
 </script>
 

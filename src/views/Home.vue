@@ -28,7 +28,7 @@ export default {
     return {
       items: [],
       itemUrl: '',
-      itemsPerPage: 100,
+      itemsPerPage: 9,
       maxPages: 10,
       activeItems: 0,
     }

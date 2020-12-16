@@ -29,7 +29,7 @@ html {
 body {
   font-size: $em-base;
   line-height: $base-line-height;
-  font-family: $font-family-base, 'fallback';
+  font-family: $font-family-base;
   color: $text-color;
   font-weight: 300;
   overflow-x: hidden;
@@ -40,7 +40,7 @@ h1 {
   font-size: 28px;
   line-height: $h1-line;
   color: $heading-color;
-  font-family: $font-family-header, 'fallback';
+  font-family: $font-family-header;
   font-weight: 700;
 }
 h2 {
@@ -48,7 +48,7 @@ h2 {
   font-size: $h2-size;
   line-height: $h2-line;
   color: $heading-color;
-  font-family: $font-family-header, 'fallback';
+  font-family: $font-family-header;
   font-weight: 700;
 }
 p {
