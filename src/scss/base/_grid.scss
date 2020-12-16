@@ -1,0 +1,15 @@
+// -- GRID and SPACINGS-- //
+
+// ** Containers
+.container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.l-flex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
